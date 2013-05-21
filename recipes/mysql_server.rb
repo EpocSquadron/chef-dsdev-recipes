@@ -9,7 +9,7 @@
 
 # This sets up a simple mysql server, with
 # a remote user on a machine.
-include_attribute "chef-dsdev-database::mysql"
+include_attributes "chef-dsdev-database::mysql"
 include_recipe "mysql"
 include_recipe "mysql::server"
 include_recipe "database::mysql"
