@@ -11,5 +11,6 @@
 # for an ubuntu box.
 include_recipe "apt"
 include_recipe "networking_basic"
+include_recipe "fail2ban"
 include_recipe "ntp"
 include_recipe "vim"
