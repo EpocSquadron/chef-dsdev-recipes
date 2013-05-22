@@ -19,4 +19,5 @@ end
 include_recipe "mysql"
 include_recipe "mysql::server"
 include_recipe "database::mysql"
+include_recipe "chef-dsdev-recipes::security_mysql_server"
 include_recipe "chef-dsdev-database::mysql_remote_access"

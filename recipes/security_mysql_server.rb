@@ -7,6 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node['mysql']['remove_anonymous_users'] = true
-node['mysql']['allow_remote_root'] = false
-node['mysql']['remove_test_database'] = true
+# Allow connections to mysql from the local
+# private network.
+simple_iptables_rule "mysql" do
+  rule "--proto tcp --dport 3306 -d 33.33.33.40"
+  jump "ACCEPT"
+end
