@@ -13,6 +13,7 @@
 # Also comes with all the bells and whistles
 # for development.
 include_recipe "chef-dsdev-recipes::ubuntu_base"
+include_recipe "chef-dsdev-recipes::security_web_server"
 include_recipe "chef-dsdev-recipes::php_current_dev"
 include_recipe "chef-dsdev-recipes::php_with_mysql"
 include_recipe "chef-dsdev-recipes::php_with_postgresql"

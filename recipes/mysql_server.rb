@@ -9,7 +9,13 @@
 
 # This sets up a simple mysql server, with
 # a remote user on a machine.
-include_attributes "chef-dsdev-database::mysql"
+
+# Ubuntu 12.10 needs the ruby-dev package for the
+# ruby headers, so the mysql ruby gem can be built.
+if node['platform_family'] = 'ubuntu'
+	node['mysql']['client']['packages'] = ["build-essential", "mysql-client", "libmysqlclient-dev", "ruby-dev"]
+end
+
 include_recipe "mysql"
 include_recipe "mysql::server"
 include_recipe "database::mysql"

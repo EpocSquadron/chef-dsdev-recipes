@@ -7,6 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# Set up fail2ban to auto-ban rapid repeated attempts
+# at logging into the box.
+include_recipe "fail2ban"
+
 # This will set up a simple firewall for our base boxes.
 include_recipe "simple_iptables"
 
