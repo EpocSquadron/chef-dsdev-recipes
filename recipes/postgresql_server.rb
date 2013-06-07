@@ -9,8 +9,8 @@
 
 # This installs a basic postgresql server
 # on a machine.
+include_recipe "chef-dsdev-recipes::security_postgresql_server"
 include_recipe "postgresql"
 include_recipe "postgresql::server"
 include_recipe "postgresql::config_initdb"
 include_recipe "database::postgresql"
-include_recipe "chef-dsdev-recipes::security_postgresql_server"

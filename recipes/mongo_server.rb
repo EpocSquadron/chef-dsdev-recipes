@@ -9,6 +9,6 @@
 
 # This sets up a simple mongo server on a
 # machine.
+include_recipe "chef-dsdev-recipes::security_mongo_server"
 include_recipe "mongodb::10gen_repo"
 include_recipe "mongodb"
-include_recipe "chef-dsdev-recipes::security_mongo_server"

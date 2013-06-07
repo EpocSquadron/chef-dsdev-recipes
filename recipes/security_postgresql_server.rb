@@ -10,6 +10,6 @@
 # Allow connections to postgresql from the local
 # private network.
 simple_iptables_rule "postgresql" do
-  rule "--proto tcp --dport 5432 -d 33.33.33.40"
+  rule "--proto tcp --dport 5432 -d #{node['chef-dsdev-database']['db_address']}"
   jump "ACCEPT"
 end
